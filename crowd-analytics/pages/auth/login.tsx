@@ -6,6 +6,7 @@ import Input from '../../components/Forms/Input'
 import style from '../../styles/Login.module.sass'
 import Image from 'next/image'
 import { FormEvent } from 'react'
+import Link from 'next/link'
 
 const LogIn: NextPage = () => {
   const [formData, updateFormData] = useForm({ username: '', password: '' })
@@ -30,6 +31,7 @@ const LogIn: NextPage = () => {
 
             <Button type="submit" className='full-width'>Login</Button>
           </form>
+          <Link href={'/auth/signup'}>Don&apos;t have an account? Click here</Link>
         </div>
       </ContentWrapper>
     </div>
